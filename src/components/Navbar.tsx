@@ -17,13 +17,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 lg:gap-3">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg">
-              <Ticket className="w-5 h-5 lg:w-6 lg:h-6 text-white" strokeWidth={2.5} />
-            </div>
-            <span className="text-2xl lg:text-3xl font-black tracking-tight text-white">
-              TicPin
-            </span>
+          <a href="/" className="flex items-center">
+            <img 
+              src="/ticpin-logo-text.png" 
+              alt="TicPin" 
+              className="h-6 lg:h-7 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
