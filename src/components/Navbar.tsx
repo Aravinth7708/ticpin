@@ -1,40 +1,41 @@
 import { useState } from "react";
 import { Menu, X, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Dining", href: "#dining" },
-    { name: "Events", href: "#events" },
-    { name: "Turfs", href: "#turfs" },
-    { name: "About", href: "#about" },
+    { name: "Dining", href: "/#dining" },
+    { name: "Events", href: "/#events" },
+    { name: "Turfs", href: "/#turfs" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-border/30" style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)' }}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
-            <img 
-              src="/ticpin-logo-text.png" 
-              alt="TicPin" 
+          <Link to="/" className="flex items-center">
+            <img
+              src="/ticpin-logo-black.png"
+              alt="TicPin"
               className="h-6 lg:h-7 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-white/80 hover:text-white transition-colors duration-200 font-medium text-sm"
+                to={link.href}
+                className="text-gray-700 hover:text-black transition-colors duration-200 font-medium text-sm"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -42,7 +43,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="#login"
-              className="text-white/80 hover:text-white transition-colors duration-200 font-medium text-sm"
+              className="text-gray-700 hover:text-black transition-colors duration-200 font-medium text-sm"
             >
               Login
             </a>
@@ -55,7 +56,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-gray-700 hover:text-primary transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -64,21 +65,21 @@ const Navbar = () => {
 
         {/* Mobile Navigation Overlay */}
         {isOpen && (
-          <div className="lg:hidden fixed inset-0 top-16 bg-background/98 backdrop-blur-lg z-40 animate-fade-up">
+          <div className="lg:hidden fixed inset-0 top-16 backdrop-blur-lg z-40 animate-fade-up" style={{ backgroundColor: 'rgba(255, 255, 255, 0.98)' }}>
             <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
-                  className="text-white text-2xl font-semibold hover:text-primary transition-colors"
+                  to={link.href}
+                  className="text-gray-900 text-2xl font-semibold hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <a
                 href="#login"
-                className="text-white text-2xl font-semibold hover:text-primary transition-colors"
+                className="text-gray-900 text-2xl font-semibold hover:text-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Login

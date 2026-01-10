@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100;200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,74 +6,86 @@
 
 @layer base {
   :root {
-    --background: 220 20% 4%;
+    --background: 253 82% 8%;
     --foreground: 0 0% 100%;
 
-    --card: 220 20% 6%;
+    --card: 253 82% 12%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 220 20% 6%;
+    --popover: 253 82% 12%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 252 82% 55%;
+    --primary: 253 82% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 18% 10%;
+    --secondary: 253 50% 15%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 14% 12%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 253 40% 18%;
+    --muted-foreground: 253 20% 65%;
 
-    --accent: 252 82% 55%;
+    --accent: 253 82% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 15%;
-    --input: 220 14% 15%;
-    --ring: 252 82% 55%;
+    --border: 253 40% 20%;
+    --input: 253 40% 20%;
+    --ring: 253 82% 55%;
 
     --radius: 1.5rem;
 
     /* Custom tokens */
-    --gradient-dark: linear-gradient(180deg, hsl(220 20% 4%) 0%, hsl(220 20% 2%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(252 82% 55%) 0%, hsl(260 80% 60%) 100%);
-    --gradient-glow: radial-gradient(ellipse at 50% 0%, hsl(252 82% 55% / 0.2) 0%, transparent 75%);
-    --gradient-glow-hero: radial-gradient(ellipse 80% 50% at 70% 50%, hsl(252 82% 55% / 0.25) 0%, transparent 70%);
-    --text-gradient: linear-gradient(90deg, hsl(252 82% 55%) 0%, hsl(270 85% 65%) 100%);
-    --diagonal-stripe: repeating-linear-gradient(-45deg, hsl(252 82% 55% / 0.03) 0px, hsl(252 82% 55% / 0.03) 2px, transparent 2px, transparent 10px);
+    --gradient-dark: linear-gradient(180deg, hsl(253 82% 8%) 0%, hsl(253 82% 5%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(253 82% 55%) 0%, hsl(260 80% 60%) 100%);
+    --gradient-glow: radial-gradient(ellipse at 50% 0%, hsl(253 82% 55% / 0.2) 0%, transparent 75%);
+    --gradient-glow-hero: radial-gradient(ellipse 80% 50% at 70% 50%, hsl(253 82% 55% / 0.25) 0%, transparent 70%);
+    --text-gradient: linear-gradient(90deg, hsl(253 82% 55%) 0%, hsl(270 85% 65%) 100%);
 
-    --sidebar-background: 220 18% 10%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 252 82% 55%;
+    /* Modern background patterns */
+    --gradient-mesh:
+      radial-gradient(at 40% 20%, hsl(253 82% 20% / 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(260 80% 25% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(253 82% 15% / 0.25) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(270 85% 20% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(253 82% 18% / 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, hsl(260 80% 22% / 0.25) 0px, transparent 50%);
+
+    --dot-pattern: radial-gradient(hsl(253 82% 55% / 0.08) 1px, transparent 1px);
+    --gradient-blob-1: radial-gradient(ellipse 800px 600px at 10% 30%, hsl(253 82% 55% / 0.1) 0%, transparent 50%);
+    --gradient-blob-2: radial-gradient(ellipse 600px 700px at 90% 70%, hsl(270 85% 60% / 0.08) 0%, transparent 50%);
+
+    --sidebar-background: 253 50% 15%;
+    --sidebar-foreground: 253 10% 98%;
+    --sidebar-primary: 253 82% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 18%;
+    --sidebar-accent: 253 40% 22%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 220 14% 20%;
-    --sidebar-ring: 252 82% 55%;
+    --sidebar-border: 253 40% 25%;
+    --sidebar-ring: 253 82% 55%;
   }
 
   .dark {
-    --background: 220 20% 4%;
+    --background: 253 82% 8%;
     --foreground: 0 0% 100%;
-    --card: 220 20% 6%;
+    --card: 253 82% 12%;
     --card-foreground: 0 0% 100%;
-    --popover: 220 20% 6%;
+    --popover: 253 82% 12%;
     --popover-foreground: 0 0% 100%;
-    --primary: 252 82% 55%;
+    --primary: 253 82% 55%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 220 18% 10%;
+    --secondary: 253 50% 15%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 220 14% 12%;
-    --muted-foreground: 215 15% 60%;
-    --accent: 252 82% 55%;
+    --muted: 253 40% 18%;
+    --muted-foreground: 253 20% 65%;
+    --accent: 253 82% 55%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 14% 15%;
-    --input: 220 14% 15%;
-    --ring: 252 82% 55%;
+    --border: 253 40% 20%;
+    --input: 253 40% 20%;
+    --ring: 253 82% 55%;
   }
 }
 
@@ -88,7 +100,7 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Outfit', system-ui, sans-serif;
+    font-family: "Anek Tamil", system-ui, sans-serif;
   }
 }
 
@@ -116,8 +128,21 @@
     background: var(--gradient-glow-hero);
   }
 
-  .bg-diagonal-stripe {
-    background: var(--diagonal-stripe);
+  .bg-gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  .bg-dot-pattern {
+    background-image: var(--dot-pattern);
+    background-size: 24px 24px;
+  }
+
+  .bg-gradient-blob-1 {
+    background: var(--gradient-blob-1);
+  }
+
+  .bg-gradient-blob-2 {
+    background: var(--gradient-blob-2);
   }
 
   .bg-pattern-overlay {
@@ -128,8 +153,10 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--diagonal-stripe);
+    background-image: var(--dot-pattern);
+    background-size: 24px 24px;
     pointer-events: none;
+    opacity: 0.5;
   }
 
   .animate-float {
