@@ -16,7 +16,7 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: "Termss of Service", href: "#terms" },
+    { name: "Terms and conditions", href: "/terms" },
     { name: "Privacy Policy", href: "#privacy" },
     { name: "Refund Policy", href: "#refund" },
     { name: "Cancellation Policy", href: "#cancellation" },
