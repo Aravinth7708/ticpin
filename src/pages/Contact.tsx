@@ -148,8 +148,8 @@ const Contact = () => {
                                             </div>
                                             <div>
                                                 <h3 className="font-semibold mb-1" style={{ color: '#000000' }}>Email</h3>
-                                                <a href="mailto:support@ticpin.com" className="text-gray-700 transition-colors" style={{ textDecoration: 'none' }}>
-                                                    support@ticpin.com
+                                                <a href="mailto:support@ticpin.in" className="text-gray-700 transition-colors" style={{ textDecoration: 'none' }}>
+                                                    support@ticpin.in
                                                 </a>
                                             </div>
                                         </div>
@@ -168,7 +168,7 @@ const Contact = () => {
                                         </div>
 
                                         {/* Address */}
-                                        <div className="flex items-start gap-4 p-6 bg-white rounded-2xl transition-all shadow-sm" style={{ border: '2px solid #000000' }}>
+                                        {/* <div className="flex items-start gap-4 p-6 bg-white rounded-2xl transition-all shadow-sm" style={{ border: '2px solid #000000' }}>
                                             <div className="p-3 rounded-full" style={{ backgroundColor: 'rgba(83, 49, 234, 0.2)' }}>
                                                 <MapPin className="w-6 h-6" style={{ color: '#5331ea' }} />
                                             </div>
@@ -179,7 +179,7 @@ const Contact = () => {
                                                     City, State 12345
                                                 </p>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>

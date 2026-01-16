@@ -1,5 +1,6 @@
 import { Instagram, Twitter, Linkedin, Facebook, Ticket, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const companyLinks = [
@@ -25,16 +26,24 @@ const Footer = () => {
   return (
     <footer className="py-6 md:py-8" style={{ backgroundColor: '#5331ea', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
       <div className="container mx-auto px-4 md:px-6">
+        {/* List Your Events First */}
+        <div className="mb-6 md:mb-8 text-center">
+          <Link to="/list-events">
+            <h3 className="text-white text-lg md:text-xl font-semibold hover:text-white/80 transition-colors cursor-pointer">
+              List your events first
+            </h3>
+          </Link>
+        </div>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-lg">
-                <Ticket className="w-4 h-4" strokeWidth={2.5} style={{ color: '#5331ea' }} />
-              </div>
-              <span className="text-xl font-black tracking-tight text-white">
-                TicPin
-              </span>
+              <img
+                src="/ticpin-logo-text.png"
+                alt="TicPin Logo"
+                className="h-5 w-auto"
+              />
             </a>
 
             <p className="text-white/80 mb-3 max-w-xs text-xs md:text-sm">
