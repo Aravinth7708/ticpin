@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
@@ -23,20 +24,16 @@ const GetStarted = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-white">
             <Navbar />
 
             {/* Main Content Section */}
             <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-4 py-20 md:py-32">
-                {/* Background Effects */}
-                <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
-                <div className="absolute inset-0 bg-dot-pattern opacity-20"></div>
-
                 <div className="relative z-10 max-w-6xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
                         {/* Left Side - Heading */}
                         <div className="text-left animate-fade-up">
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" style={{ color: '#000000' }}>
                                 Reach the right audience,
                                 <br />
                                 <span className="text-gradient">earn as your grow</span>
@@ -64,10 +61,10 @@ const GetStarted = () => {
 
                                         {/* Step Content */}
                                         <div className="flex-1 pt-1">
-                                            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+                                            <h3 className="text-lg md:text-xl font-semibold mb-2" style={{ color: '#000000' }}>
                                                 {step.title}
                                             </h3>
-                                            <p className="text-white/60 text-sm md:text-base leading-relaxed">
+                                            <p className="text-sm md:text-base leading-relaxed" style={{ color: '#6b7280' }}>
                                                 {step.description}
                                             </p>
                                         </div>
@@ -77,34 +74,23 @@ const GetStarted = () => {
 
                             {/* CTA Button */}
                             <div className="pt-4 animate-bounce-in" style={{ animationDelay: '0.6s' }}>
-                                <Button
-                                    className="px-6 py-6 text-base font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-2 group"
-                                    style={{
-                                        backgroundColor: '#000000',
-                                        color: 'white'
-                                    }}
-                                >
-                                    Start your journey
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </Button>
+                                <Link to="/account-setup">
+                                    <Button
+                                        className="px-6 py-6 text-base font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-2 group"
+                                        style={{
+                                            backgroundColor: '#000000',
+                                            color: 'white'
+                                        }}
+                                    >
+                                        Start your journey
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Decorative Elements */}
-                <div
-                    className="absolute top-1/3 left-20 w-32 h-32 rounded-full opacity-10 animate-float"
-                    style={{ backgroundColor: '#5331ea', filter: 'blur(60px)' }}
-                ></div>
-                <div
-                    className="absolute bottom-1/3 right-20 w-40 h-40 rounded-full opacity-10 animate-float"
-                    style={{
-                        backgroundColor: '#5331ea',
-                        filter: 'blur(80px)',
-                        animationDelay: '1.5s'
-                    }}
-                ></div>
             </section>
 
             <Footer />

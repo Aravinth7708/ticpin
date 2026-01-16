@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ListEvents from "./pages/ListEvents";
 import GetStarted from "./pages/GetStarted";
+import AccountSetup from "./pages/AccountSetup";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/list-events" element={<ListEvents />} />
           <Route path="/get-started" element={<GetStarted />} />
+          <Route path="/account-setup" element={<AccountSetup />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
